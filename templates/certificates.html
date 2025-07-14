@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+    <title>Grandevoyager</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/logo/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/logo/site.webmanifest' %}">
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="{% static 'css/vendors.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/icon.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'demos/green-energy/green-energy.css' %}"/>
+	
+<style>
+    .certificate-banner{
+        background-image: url("{% static 'images/certificate-banner.png' %}");
+    }
+</style>
+</head>
+<body data-mobile-nav-style="classic">
+
+    {% include 'components/navbar.html' %}
+
+    <!-- start page title -->
+    <section class="top-space-margin overflow-hidden p-0 bg-very-light-gray page-title-big-typography">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center small-screen sm-h-400px g-0">
+                <div class="col-md-6 d-flex justify-content-center flex-column ps-7 pe-15px sm-ps-15px cover-background banner-background text-white text-md-start text-center page-title-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    <h1 class="fw-600 mb-10px ls-minus-2px">Certificates</h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 position-relative cover-background sm-pt-50px certificate-banner" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    
+    <section class="bg-very-light-green">
+        <div class="container" data-anime='{"opacity": [0,1], "duration": 600, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="row">
+                <div class="col">
+                    <ul class="image-gallery-style-01 gallery-wrapper grid grid-3col xxl-grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large">
+                        <li class="grid-sizer"></li> 
+                        
+                        {% for certificate in certificates %}
+                        <li class="grid-item transition-inner-all">
+                            <div class="gallery-box border-radius-6px">
+                                <a href="{{ certificate.certificate_image.url }}" data-group="lightbox-gallery" title="{{ certificate.certificate_name }}">
+                                    <div class="position-relative gallery-image bg-dark-gray overflow-hidden">
+                                        <img src="{{ certificate.certificate_image.url }}" alt="" />
+                                        <div class="d-flex align-items-center justify-content-center position-absolute top-0px left-0px w-100 h-100 gallery-hover move-bottom-top">
+                                            <div class="d-flex align-items-center justify-content-center w-60px h-60px rounded-circle bg-white">
+                                                <i class="icon feather icon-feather-search icon-extra-medium text-dark-gray"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/footer.html' %}
+
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vendors.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+    <title>Grandevoyager</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/logo/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/logo/site.webmanifest' %}">
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="{% static 'css/vendors.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/icon.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'demos/green-energy/green-energy.css' %}"/>
+	
+    <style>
+        .home-bg-one {
+            background-image: url("{% static 'images/home-slide1.jpg' %}");
+        }
+        .home-bg-two {
+            background-image: url("{% static 'images/home-slide2.jpg' %}");
+        }
+        .home-bg-three {
+            background-image: url("{% static 'images/home-slide3.jpg' %}");
+        }
+        .home-h1{
+            background-image: url("{% static 'images/home-h1.jpg' %}");
+        }
+
+        .bgyellow{
+            --bs-bg-opacity: 1;
+            background: linear-gradient(to top, rgb(255 255 255) 0%, #fadb94 100%);
+        }
+
+    </style>
+
+</head>
+<body data-mobile-nav-style="classic">
+
+    {% include 'components/navbar.html' %}
+
+    <!-- start banner slider -->
+    <section class="p-0 top-space-margin position-relative overflow-hidden">
+        <div class="swiper full-screen swiper-number-pagination-style-01 md-h-auto magic-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".main-swiper-pagination", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide" >
+                    <div class="container-fluid h-100 g-0">
+                        <div class="row h-100 p-0">
+                            <div class="col-xxl-5 col-lg-6 text-white bg-very-light-green cover-background ps-6 xxl-ps-4 sm-ps-15px order-2 order-lg-1 md-pt-50px md-pb-15 xs-pb-20 home-banner-background">
+                                <div class="d-flex justify-content-center align-items-lg-start align-items-center text-lg-start text-center flex-column h-100" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                    <img src="{% static 'images/logo/main-logo-white.png' %}" alt="Grandevoyager" class="mb-30px" style="max-height: 80px;">
+                                    <span class="fs-15 fw-500 ls-05px mb-20px d-inline-block border-bottom border-2 border-color-transparent-white-very-light text-uppercase">Grande by Name, Grand in Service</span>
+                                    <div class="fs-75 lg-fs-55 fw-600 ls-minus-2px md-w-80 sm-w-100 xs-w-90">
+                                        <span>Moving Beyond</span>
+                                        <span class="position-relative z-index-1">Boundaries
+                                            <span>
+                                                <img src="{% static 'images/separator-svg.svg' %}" alt="" class="position-absolute bottom-5px left-0px w-100 z-index-minus-1">
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="d-inline-block mt-45px sm-mt-30px">
+                                        <a href="{% url 'about' %}" class="btn btn-extra-large btn-white btn-rounded btn-switch-text btn-box-shadow d-inline-block me-20px sm-me-10px align-middle left-icon">
+                                            <span>
+                                                <span><i class="feather icon-feather-thumbs-up"></i></span>
+                                                <span class="btn-double-text ls-minus-05px" data-text="About Us">About Us</span>
+                                            </span>
+                                        </a>
+                                        <a href="{% url 'services' %}" class="btn btn-link btn-hover-animation-switch fw-500 btn-extra-large text-white btn-icon-left xs-mt-15px">
+                                            <span>
+                                                <span class="btn-text">View services</span>
+                                                <span class="btn-icon"><i class="feather icon-feather-box"></i></span>
+                                                <span class="btn-icon"><i class="feather icon-feather-box"></i></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-7 col-lg-6 cover-background sm-background-position-top-center order-1 order-lg-2 md-h-500px sm-h-400px home-bg-one"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide" >
+                    <div class="container-fluid h-100 g-0">
+                        <div class="row h-100 p-0">
+                            <div class="col-xxl-5 col-lg-6 text-white bg-very-light-green cover-background ps-6 xxl-ps-4 sm-ps-15px order-2 order-lg-1 md-pt-50px md-pb-15 xs-pb-20 home-banner-background" >
+                                <div class="d-flex justify-content-center align-items-lg-start align-items-center text-lg-start text-center flex-column h-100" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                    <img src="{% static 'images/logo/main-logo-white.png' %}" alt="Grandevoyager" class="mb-30px" style="max-height: 80px;">
+                                    <span class="fs-15 fw-500 ls-05px mb-20px d-inline-block border-bottom border-2 border-color-transparent-white-very-light text-uppercase">Grande by Name, Grand in Service</span>
+                                    <div class="fs-75 lg-fs-55 fw-600 ls-minus-2px md-w-80 sm-w-100 xs-w-90">
+                                        <span>Effortless Freight</span>
+                                        <span class="position-relative z-index-1">Solutions
+                                            <span>
+                                                <img src="{% static 'images/separator-svg.svg' %}" alt="" class="position-absolute bottom-5px left-0px w-100 z-index-minus-1">
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="d-inline-block mt-45px sm-mt-30px">
+                                        <a href="{% url 'about' %}" class="btn btn-extra-large btn-white btn-rounded btn-switch-text btn-box-shadow d-inline-block me-20px sm-me-10px align-middle left-icon">
+                                            <span>
+                                                <span><i class="feather icon-feather-thumbs-up"></i></span>
+                                                <span class="btn-double-text ls-minus-05px" data-text="About Us">About Us</span>
+                                            </span>
+                                        </a>
+                                        <a href="{% url 'services' %}" class="btn btn-link btn-hover-animation-switch fw-500 btn-extra-large text-white btn-icon-left xs-mt-15px">
+                                            <span>
+                                                <span class="btn-text">View services</span>
+                                                <span class="btn-icon"><i class="feather icon-feather-box"></i></span>
+                                                <span class="btn-icon"><i class="feather icon-feather-box"></i></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-7 col-lg-6 cover-background sm-background-position-top-center order-1 order-lg-2 md-h-500px sm-h-400px home-bg-two"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide" >
+                    <div class="container-fluid h-100 g-0">
+                        <div class="row h-100 p-0">
+                            <div class="col-xxl-5 col-lg-6 text-white bg-very-light-green cover-background ps-6 xxl-ps-4 sm-ps-15px order-2 order-lg-1 md-pt-50px md-pb-15 xs-pb-20 home-banner-background">
+                                <div class="d-flex justify-content-center align-items-lg-start align-items-center text-lg-start text-center flex-column h-100" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                    <img src="{% static 'images/logo/main-logo-white.png' %}" alt="Grandevoyager" class="mb-30px" style="max-height: 80px;">
+                                    <span class="fs-15 fw-500 ls-05px mb-20px d-inline-block border-bottom border-2 border-color-transparent-white-very-light text-uppercase">Grande by Name, Grand in Service</span>
+                                    <div class="fs-75 lg-fs-55 fw-600 ls-minus-2px md-w-80 sm-w-100 xs-w-90">
+                                        <span>Taking Your</span>
+                                        <span class="position-relative z-index-1">Business
+                                            <span>
+                                                <img src="{% static 'images/separator-svg.svg' %}" alt="" class="position-absolute bottom-5px left-0px w-100 z-index-minus-1">
+                                            </span>
+                                        </span>
+                                        <span>Global</span>
+                                    </div>
+                                    <div class="d-inline-block mt-45px sm-mt-30px">
+                                        <a href="{% url 'about' %}" class="btn btn-extra-large btn-white btn-rounded btn-switch-text btn-box-shadow d-inline-block me-20px sm-me-10px align-middle left-icon">
+                                            <span>
+                                                <span><i class="feather icon-feather-thumbs-up"></i></span>
+                                                <span class="btn-double-text ls-minus-05px" data-text="About Us">About Us</span>
+                                            </span>
+                                        </a>
+                                        <a href="{% url 'services' %}" class="btn btn-link btn-hover-animation-switch fw-500 btn-extra-large text-white btn-icon-left xs-mt-15px">
+                                            <span>
+                                                <span class="btn-text">View services</span>
+                                                <span class="btn-icon"><i class="feather icon-feather-box"></i></span>
+                                                <span class="btn-icon"><i class="feather icon-feather-box"></i></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-7 col-lg-6 cover-background md-background-position-top-center order-1 order-lg-2 md-h-500px sm-h-400px home-bg-three"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--<div class="swiper-pagination main-swiper-pagination w-auto left-0 md-right-0px text-center swiper-number fs-14 ps-6 xxl-ps-4 md-ps-0" style="position: absolute; bottom: 30px; z-index: 10;"></div> -->
+            </div>
+        <div class="position-absolute md-position-relative right-210px xxl-right-25px md-right-0px bottom-minus-5px z-index-1 w-35 xl-w-45 md-w-100 md-bottom-minus-0px md-mt-6">
+            <div class="row border-radius-10px lg-no-border-radius overflow-hidden g-0 md-ps-5 md-pe-5 sm-pb-15px">
+
+                <div class="col-md-12 p-7 sm-p-0 bgyellow  text-center">
+                    <div class="fs-24 lg-fs-20 lh-32 lg-lh-24 text-dark-gray ls-minus-1px mb-20px md-mb-15px"><span class="fw-600">Subscribe Now </span>for the Latest</div>
+                    <div class="d-inline-block w-100 newsletter-style-02 position-relative">
+                        <form action="/" method="post" class="position-relative w-100">
+                            {% csrf_token %}
+                            <input class="bg-transparent border-color-base-color w-100 form-control required border-radius-50px" type="email" name="email" placeholder="Enter your email">
+                            <button class="btn submit bg-base-color border-radius-30px" aria-label="submit" type="submit"><i class="icon bi bi-arrow-right icon-small text-white"></i></button>
+                        </form>
+                    </div>
+                    <span class="fs-12 lh-20 mt-5px d-inline-block">*You agree to Grandevoyager's terms of service.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+    <!-- about section -->
+    <section>
+        <div class="container"> 
+            <div class="row justify-content-center mb-6 md-mb-50px">                    
+                <div class="col-lg-7 col-12 md-mb-35px last-paragraph-no-margin" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <div class="mb-10px">
+                        <span class="w-30px h-2px fs-15 d-inline-block bg-base-color me-5px align-middle"></span>
+                        <span class="text-uppercase text-base-color fs-16 fw-600 d-inline-block">About GrandeVoyager Logistics</span>
+                    </div>
+                    <h2 class="text-dark-gray fw-700 ls-minus-2px">Professional Freight Solutions You Can Trust</h2>
+                    <p class="w-85 lg-w-100">GrandeVoyager Logistics FZE operates from Jebel Ali Freezone, specializing in RORO shipping from China to the UAE, comprehensive 
+                        warehousing and packaging services, and out-of-gauge and heavy lift cargo solutions. With decades of combined experience and direct connections to 
+                        major ports worldwide, we deliver competitive rates, priority bookings, and real-time visibility for complex logistics challenges.</p>
+                </div>
+                <div class="col-xl-4 col-lg-5 col-12">
+                    <div class="border-radius-10px overflow-hidden" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden last-paragraph-no-margin">
+                            <img src="{% static 'images/home-about.png' %}" alt="about">
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center mb-6 sm-mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                
+                <div class="col custom-icon-with-text-style-02 border-end xs-border-end-0 md-mb-30px">
+                    <div class="feature-box last-paragraph-no-margin">
+                        <div class="feature-box-icon">
+                            <img class="custom-image-icon mb-30px" src="{% static 'images/experience.png' %}" alt="icon" />
+                        </div>
+                        <div class="feature-box-content">
+                            <span class="d-block fs-20 fw-600 text-dark-gray mb-10px">Global Expertise</span>
+                            <p class="w-80 xl-w-100 mx-auto">China-UAE trade route specialists with worldwide shipping know-how.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col custom-icon-with-text-style-02 border-end md-border-end-0 md-mb-30px">
+                    <div class="feature-box last-paragraph-no-margin">
+                        <div class="feature-box-icon">
+                            <img class="custom-image-icon mb-30px" src="{% static 'images/solution.png' %}" alt="icon" />
+                        </div>
+                        <div class="feature-box-content">
+                            <span class="d-block fs-20 fw-600 text-dark-gray mb-10px">Faster Solutions</span>
+                            <p class="w-80 xl-w-100 mx-auto">Direct RORO shipping and Jebel Ali advantage, slash delivery times.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col custom-icon-with-text-style-02 border-end xs-border-end-0 xs-mb-30px">
+                    <div class="feature-box last-paragraph-no-margin">
+                        <div class="feature-box-icon">
+                            <img class="custom-image-icon mb-30px" src="{% static 'images/heavy-duty.png' %}" alt="icon" />
+                        </div>
+                        <div class="feature-box-content">
+                            <span class="d-block fs-20 fw-600 text-dark-gray mb-10px">Heavy Lift Specialists</span>
+                            <p class="w-80 xl-w-100 mx-auto">We move oversized and heavy lift cargo that others won't touch.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col custom-icon-with-text-style-02">
+                    <div class="feature-box last-paragraph-no-margin">
+                        <div class="feature-box-icon">
+                            <img class="custom-image-icon mb-30px" src="{% static 'images/real-time.png' %}" alt="icon" />
+                        </div>
+                        <div class="feature-box-content">
+                            <span class="d-block fs-20 fw-600 text-dark-gray mb-10px">Real-Time Visibility</span>
+                            <p class="w-80 xl-w-100 mx-auto">Track every step with live updates and full cargo transparency.</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="row justify-content-center g-0" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <div class="col-auto pt-15px pb-15px ps-40px pe-40px md-ps-25px md-pe-25px bg-very-light-green border-radius-100px">
+                    <div class="feature-box feature-box-left-icon-middle">
+                        <div class="feature-box-content text-dark-gray fs-18">
+                            Let's discuss your shipping needs.<a href="{% url 'contact' %}" class="text-dark-gray fw-600"> Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Process section -->
+    <section class="p-0">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-xxl-7 col-lg-6 cover-background md-h-600px sm-h-400px home-h1" data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <a href="" class="absolute-middle-center bg-white d-inline-block rounded-circle video-icon-box video-icon-extra-large popup-youtube">
+                        <span>
+                            <span class="video-icon">
+                                <i class="fa-solid fa-play text-green"></i> 
+                                <span class="video-icon-sonar">
+                                    <span class="video-icon-sonar-bfr bg-white"></span>
+                                </span>
+                            </span> 
+                        </span>
+                    </a>
+                </div>
+                <div class="col-xxl-5 col-lg-6 bg-very-light-green p-6 xl-p-4 md-p-50px sm-p-30px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="mb-10px">
+                        <span class="w-30px h-2px fs-15 d-inline-block bg-base-color me-5px align-middle"></span>
+                        <span class="text-uppercase text-base-color fs-16 fw-600 d-inline-block">Our Process</span>
+                    </div>
+                    <h3 class="text-dark-gray fw-700 ls-minus-2px w-85 xxl-w-100">How We Move Your Cargo Forward</h3>
+                    <p class="w-80 sm-w-100">From initial consultation to final delivery, our streamlined process ensures your cargo moves efficiently through every stage. We handle the complexities while keeping you informed with real-time updates and milestone tracking throughout the journey.</p>
+                    <div class="mb-20px">
+                        <!-- start features box item -->
+                        <div class="icon-with-text-style-08 mb-10px">
+                            <div class="feature-box feature-box-left-icon-middle">
+                                <div class="feature-box-icon feature-box-icon-rounded w-40px h-40px bg-white box-shadow-medium-bottom rounded-circle me-10px">
+                                    <i class="fa-solid fa-check fs-14 text-dark-gray"></i> 
+                                </div>
+                                <div class="feature-box-content"> 
+                                    <span class="text-dark-gray fw-600">Expert consultation and planning</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                        <!-- start features box item -->
+                        <div class="icon-with-text-style-08">
+                            <div class="feature-box feature-box-left-icon-middle">
+                                <div class="feature-box-icon feature-box-icon-rounded w-40px h-40px bg-white box-shadow-medium-bottom rounded-circle me-10px">
+                                    <i class="fa-solid fa-check fs-14 text-dark-gray"></i> 
+                                </div>
+                                <div class="feature-box-content"> 
+                                    <span class="text-dark-gray fw-600">Live tracking throughout transit</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end features box item -->
+                    </div>
+                    <div class="d-inline-flex flex-wrap">
+                        <a href="{% url 'about' %}" class="btn btn-extra-large btn-base-color btn-rounded btn-switch-text btn-box-shadow d-inline-block me-20px sm-me-10px align-middle left-icon mt-15px">
+                            <span>
+                                <span><i class="feather icon-feather-thumbs-up"></i></span>
+                                <span class="btn-double-text ls-minus-05px" data-text="Discover more">Discover more</span>
+                            </span>
+                        </a>
+                        <a href="{% url 'contact' %}" class="btn btn-extra-large btn-base-color btn-rounded btn-switch-text btn-box-shadow d-inline-block me-20px sm-me-10px align-middle left-icon mt-15px">
+                            <span>
+                                <span><i class="bi bi-telephone-outbound"></i></span>
+                                <span class="btn-double-text ls-minus-05px" data-text="Contact us">Contact us</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why choose Us section -->
+    <section class="pb-14 sm-pb-50px position-relative overflow-hidden">
+        <div class="container">
+            <div class="row mb-6 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <div class="col">
+                    <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Why Choose Us</span>
+                    <h2 class="fw-700 mb-0 text-dark-gray ls-minus-2px">Why Choose GrandeVoyager</h2>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center text-lg-start text-center">
+                <div class="col-xl-4 col-lg-5 col-md-9 lg-mb-6 sm-mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <h4 class="fw-700 text-dark-gray ls-minus-1px mb-20px">Excellence in Every Shipment</h4>
+                    <p class="mb-35px w-90 lg-w-100">The increase in extreme weather events and rising sea levels are unmistakable signs of climate change. Roughly 850 million people still live without access to electricity, which is the foundation of sustainable development. 850 million people still live without access to electricity, which is the foundation of sustainable development.</p>
+                    <a href="{% url 'services' %}" class="btn btn-large btn-dark-gray btn-rounded btn-switch-text btn-box-shadow">
+                        <span>
+                            <span class="btn-double-text" data-text="View services">View services</span>
+                            <span><i class="feather icon-feather-arrow-right"></i></span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-xl-5 col-lg-7 lg-mb-6 sm-mb-50px position-relative" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <img src="{% static 'images/home-p1.png' %}" alt="" class="border-radius-15px sm-w-85 sm-text-start">
+                    {% load static %}
+                    <img src="{% static 'images/demo-green-energy-home-01.png' %}" alt="" class="position-absolute top-15px right-10px xxl-top-30px xl-top-50px xl-right-minus-80px lg-right-0px lg-top-100px md-top-30px md-right-30px z-index-minus-1 d-md-block d-none">
+                    <!--<div class="d-inline-flex flex-column justify-content-center text-center align-items-center rounded-circle h-170px w-170px xs-h-130px xs-w-130px text-white bg-base-color fw-500 fs-26 lh-32 ps-10px pe-10px position-absolute bottom-60px right-30px xxl-right-minus-20px lg-right-40px md-right-100px md-bottom-40px sm-left-10px sm-bottom-20px z-index-1"><h3 class="mb-0 fw-700 ls-minus-2px">5K+</h3><span class="fs-15 lh-18 w-80">Happy Clients</span></div>-->
+                </div>
+                <!-- <div class="col-xl-2 ms-6 lg-ms-0" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-auto mb-50px lg-mb-30px">
+                            <h2 class="fw-700 text-dark-gray ls-minus-3px mb-5px counter" data-speed="2000" data-to="6145"></h2>
+                            <span class="d-inline-block lh-22 w-85 lg-w-60">Projects completed in last 5 years.</span>
+                        </div>
+                        <div class="col-lg-auto mb-50px lg-mb-30px">
+                            <h2 class="fw-700 text-dark-gray ls-minus-3px mb-5px counter" data-speed="2000" data-to="5194"></h2>
+                            <span class="d-inline-block lh-22 w-85 lg-w-60">Happy customers who trusted us.</span>
+                        </div>
+                        <div class="col-lg-auto">
+                            <h2 class="fw-700 text-dark-gray ls-minus-3px mb-5px counter" data-speed="2000" data-to="547"></h2>
+                            <span class="d-inline-block lh-22 w-85 lg-w-60">Awards milestones awarded to us.</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="position-absolute bottom-minus-40px lg-bottom-minus-20px text-center w-100 fs-250 xxl-fs-200 xl-fs-180 lg-fs-140 d-none d-md-block text-gradient-light-green-white z-index-minus-2 ls-minus-8px fw-700" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>Grandevoyager</div>
+    </section>
+    
+    <!-- Services section -->
+    <section class="py-0 ps-7 pe-7 xl-ps-5 xl-pe-5 lg-ps-3 lg-pe-3 xs-ps-15px xs-pe-15px">
+        <div class="overflow-hidden bg-very-light-green border-radius-20px lg-border-radius-0px pt-7 pb-7 lg-pt-5 lg-pb-5 lg-ps-3 lg-pe-3 sm-pt-50px sm-pb-50px">
+            <div class="container">
+                <div class="row align-items-center mb-5 sm-mb-9 text-center text-md-start" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="col-lg-5 col-md-6 md-mb-20px">
+                        <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Our Services</span>
+                        <h3 class="text-dark-gray fw-700 mb-0 ls-minus-1px">Complete Logistics Solutions</h3>
+                    </div>
+                    <div class="col-lg-5 col-md-6 last-paragraph-no-margin md-mb-20px">
+                        <p class="w-80 xl-w-100 mx-auto">Professional freight forwarding services across sea, air, & land with expert handling for every cargo type.</p>
+                    </div>
+                    <div class="col-lg-2 d-flex justify-content-center justify-content-xl-end">
+                        <!-- start slider navigation -->
+                        <div class="slider-one-slide-prev-1 icon-extra-medium text-dark-gray swiper-button-prev slider-navigation-style-04 bg-white box-shadow-medium-bottom">
+                            <i class="feather icon-feather-arrow-left"></i>
+                        </div>
+                        <div class="slider-one-slide-next-1 icon-extra-medium text-dark-gray swiper-button-next slider-navigation-style-04 bg-white box-shadow-medium-bottom">
+                            <i class="feather icon-feather-arrow-right"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row align-items-center mb-5 xs-mb-30px">
+                    <div class="col-12" data-anime='{ "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <div class="outside-box-right-25 sm-outside-box-right-0">
+                            <div class="swiper slider-one-slide" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": true, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 4 }, "992": { "slidesPerView": 3 }, "768": { "slidesPerView": 2 }, "320": { "slidesPerView": 1 } }, "effect": "slide" }'>
+                                <div class="swiper-wrapper image-gallery-style-01">
+
+                                    {% for service in services %}
+                                    <div class="swiper-slide transition-inner-all">
+                                        <div class="gallery-box">
+                                            <div class="position-relative gallery-image bg-dark-gray overflow-hidden border-radius-6px">
+                                                <img src="{{ service.service_image.url }}" alt="Gallery Image" />
+                                            </div>
+                                            <a href="/services/{{ service.slug }}/"><div class="mt-2 fs-18 fw-500 text-dark-gray">{{ service.service_title }}</div></a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-10 text-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="bg-red fw-700 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-13 me-5px d-inline-block align-middle">Free</div>
+                        <div class="fs-20 text-dark-gray d-inline-block align-middle">Get your personalized shipping solution. <a href="{% url 'contact' %}" class="text-dark-gray text-dark-gray-hover text-decoration-line-bottom fw-600">Get a free quote.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- globe section -->
+    <section>
+        <div class="container">
+            <div class="row text-center justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <div class="col-xxl-6 col-lg-8 mb-4 xs-mb-30px">
+                    <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Success Stories from </span>
+                    <h3 class="fw-700 mb-0 text-dark-gray ls-minus-1px">Around the Globe.</h3>
+                </div>
+                <div class="col-12">
+                    <img src="{% static 'images/demo-green-energy-home-img-041.png' %}" alt="" class="w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog section -->
+    <section class="bg-gradient-green-transparent">
+        <div class="container">
+            <div class="row mb-3 text-center">
+                <div class="col" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Browse the latest</span>
+                    <h3 class="fw-700 mb-0 text-dark-gray ls-minus-1px">Latest articles</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <li class="grid-sizer"></li>
+                        
+                        {% for blog in blogs %}
+                        <li class="grid-item">
+                            <div class="card border-0 border-radius-5px box-shadow-quadruple-large box-shadow-quadruple-large-hover">
+                                <div class="blog-image">
+                                    <a href="/blogs/{{ blog.slug }}/" class="d-block">
+                                        <img src="{{ blog.blog_image.url }}" alt="blog" />
+                                    </a>
+                                    <div class="blog-categories">
+                                        <a href="/blogs/{{ blog.slug }}/" class="categories-btn bg-white text-dark-gray text-dark-gray-hover text-uppercase fw-700">{{ blog.posted_on|date:"d M, Y" }}</a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-6 lg-p-10">
+                                    <a href="/blogs/{{ blog.slug }}/" class="card-title mb-15px fw-600 fs-20 text-dark-gray d-inline-block">{{ blog.blog_title }}</a>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/footer.html' %}
+
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vendors.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

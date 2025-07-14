@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+    <title>Grandevoyager</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/logo/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/logo/site.webmanifest' %}">
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="{% static 'css/vendors.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/icon.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'demos/green-energy/green-energy.css' %}"/>
+	
+<style>
+    .contact-banner{
+        background-image: url("{% static 'images/contact-banner.png' %}");
+    }
+</style>
+</head>
+<body data-mobile-nav-style="classic">
+
+    {% include 'components/navbar.html' %}
+
+    <!-- banner -->
+    <section class="top-space-margin overflow-hidden p-0 bg-very-light-gray page-title-big-typography">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center small-screen sm-h-400px g-0">
+                <div class="col-md-6 d-flex justify-content-center flex-column ps-7 pe-15px sm-ps-15px cover-background banner-background text-white text-md-start text-center page-title-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    <h1 class="fw-600 mb-10px ls-minus-2px">Contact Us</h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 position-relative cover-background sm-pt-50px contact-banner" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'></div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    
+    <!-- start section -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 md-mb-40px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 250, "easing": "easeOutQuad" }'>
+                    <div class="position-sticky top-120px">
+                        <div class="mb-10px">
+                            <span class="w-30px h-2px fs-15 d-inline-block bg-base-color me-5px align-middle"></span>
+                            <span class="text-uppercase text-base-color fs-16 fw-600 d-inline-block">Get in touch with us</span>
+                        </div>
+                        <h3 class="text-dark-gray fw-700 ls-minus-2px mb-20px">Let's Move Something Together</h3>
+                        <p>Have a shipment to discuss or a question about our services? Reach out, we're here to help.</p>
+                        <a href="tel:+971553698223" class="btn btn-large btn-base-color btn-rounded btn-switch-text left-icon btn-box-shadow">
+                            <span>
+                                <span><i class="bi bi-telephone-outbound"></i></span>
+                                <span class="btn-double-text" data-text="Schedule a call">Schedule a call</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7 offset-xl-1">
+                    <div class="row row-cols-1 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        
+                        <div class="col services-box-style-02 mb-30px">
+                            <div class="row g-0 box-shadow-quadruple-large border-radius-6px overflow-hidden">
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="h-100 cover-background xs-h-300px" style="background-image: url({% static 'images/contact-location.png' %})"></div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 bg-white box-shadow-extra-large p-40px xl-p-30px">
+                                    <div class="services-box-content last-paragraph-no-margin">
+                                        <span class="d-block text-dark-gray fw-700 fs-19 mb-10px">UAE</span>
+                                        <p>LOB 09 - JAFZA, Office Number 006, (Ground Floor), Jebel Ali - United Arab Emirates</p>
+                                        <a href="#" class="fs-17 lh-22 fw-500 text-dark-gray text-decoration-line-bottom d-inline-block mb-25px">View on map</a>
+                                        <div class="text-dark-gray fw-600"><i class="feather icon-feather-phone-call icon-small me-10px text-dark-gray"></i><a href="tel:+971553698223">+971 55 369 8223</a></div>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+                        <!-- end services box item --> 
+                        <!-- start services box item -->
+                        <!-- <div class="col services-box-style-02 mb-30px">
+                            <div class="row g-0 box-shadow-quadruple-large border-radius-6px overflow-hidden">
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="h-100 cover-background xs-h-300px" style="background-image: url(https://placehold.co/350x350)"></div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 bg-white box-shadow-extra-large p-40px xl-p-30px">
+                                    <div class="services-box-content last-paragraph-no-margin">
+                                        <span class="d-block text-dark-gray fw-700 fs-19 mb-10px">San Francisco</span>
+                                        <p>777 Magnolia farme ville, San Francisco, 93223</p>
+                                        <a href="#" class="fs-17 lh-22 fw-500 text-dark-gray text-decoration-line-bottom d-inline-block mb-25px">View on map</a>
+                                        <div class="text-dark-gray fw-600"><i class="feather icon-feather-phone-call icon-small me-10px text-dark-gray"></i><a href="tel:+1-2345678910">+1234 567 8910</a></div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- map section --> 
+    <section class="p-0">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-0"> 
+                    <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1861093.4530496637!2d52.62905306139492!3d24.348298726411972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1751274055523!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> 
+            </div>
+        </div>
+    </section>
+    
+    <!-- contact form section --> 
+    <section class="bg-very-light-green">     
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-xl-5 col-lg-6 md-mb-50px" data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>  
+                    <div class="bg-white border-radius-6px box-shadow-quadruple-large p-14 xxl-p-10 lg-ps-8 lg-pe-8" data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Reach Us</span>
+                        <h4 class="text-dark-gray ls-minus-1px fw-700 mb-15px">We're Just a Call or Click Away</h4>
+                        <p class="w-85 sm-w-100">For quick support or service inquiries, connect with our team directly.</p>
+                        <div class="row row-cols-1 row-cols-sm-2">
+                            <div class="col last-paragraph-no-margin mb-25px">
+                                <p>Call us directly?</p>
+                                <a href="tel:+971553698223" class="text-dark-gray fw-600">+971 55 369 8223</a>
+                            </div>
+                            <div class="col last-paragraph-no-margin mb-25px">
+                                <p>Need live support?</p>
+                                <a href="mailto:Vallath@grandevoyager.com" class="text-dark-gray fw-600" >Vallath@grandevoyager.com</a>
+                            </div>
+                            <div class="col last-paragraph-no-margin sm-mb-25px">
+                                <p>Join growing team?</p>
+                                <a href="mailto:visakh@grandevoyager.com" class="text-dark-gray fw-600">visakh@grandevoyager.com</a>    
+                            </div>
+                            <div class="col last-paragraph-no-margin">
+                                <p>Visit headquarters?</p>
+                                <a href="" target="_blank" class="text-dark-gray fw-600">View on google map</a>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-xl-1 md-mb-50px sm-mb-0" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <h3 class="text-dark-gray ls-minus-2px fw-700">Let's Start the Conversation</h3>
+                    <form action="" method="post" class="contact-form-style-03">
+                        {% csrf_token %}
+                        <label for="exampleInputEmail1" class="form-label fs-13 text-uppercase text-dark-gray fw-600 mb-0">Enter Your Name*</label>
+                        <div class="position-relative form-group mb-20px">
+                            <span class="form-icon"><i class="bi bi-emoji-smile text-dark-gray"></i></span>
+                            <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" id="exampleInputEmail1" type="text" name="name" placeholder="What's your good name" />
+                        </div>
+                        <label for="exampleInputEmail1" class="form-label fs-13 text-uppercase text-dark-gray fw-600 mb-0">Email Address*</label>
+                        <div class="position-relative form-group mb-20px">
+                            <span class="form-icon"><i class="bi bi-envelope text-dark-gray"></i></span>
+                            <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" id="exampleInputEmail2" type="email" name="email" placeholder="Enter your email address" />
+                        </div>
+                        <label for="exampleInputEmail1" class="form-label fs-13 text-uppercase text-dark-gray fw-600 mb-0">Phone Number*</label>
+                        <div class="position-relative form-group mb-20px">
+                            <span class="form-icon"><i class="bi bi-telephone text-dark-gray"></i></span>
+                            <input class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required" id="exampleInputEmail2" type="tel" name="phone" placeholder="Enter your phone number" />
+                        </div>
+                        <label for="exampleInputEmail1" class="form-label fs-13 text-uppercase text-dark-gray fw-600 mb-0">Your Message</label>
+                        <div class="position-relative form-group form-textarea mb-0"> 
+                            <textarea class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control" name="message" placeholder="Describe about your project" rows="3"></textarea>
+                            <span class="form-icon"><i class="bi bi-chat-square-dots text-dark-gray"></i></span>
+                        </div>
+                        <div class="row mt-25px align-items-center">
+                            <div class="col-xl-7 col-lg-12 col-sm-7 lg-mb-30px md-mb-0">
+                                <p class="mb-0 fs-14 lh-22 text-center text-sm-start">We will never collect information about you without your explicit consent.</p>
+                            </div>
+                            <div class="col-xl-5 col-lg-12 col-sm-5 text-center text-sm-end text-lg-start text-xl-end xs-mt-25px">
+                                <input id="exampleInputEmail3" type="hidden" name="redirect" value="">
+                                <button class="btn btn-medium btn-dark-gray btn-rounded btn-box-shadow" type="submit">Send message</button> 
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center" data-anime='{"opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                <div class="col-md-auto text-center text-md-end sm-mb-20px">
+                    <h6 class="text-dark-gray fw-600 mb-0">Connect with social media </h6>
+                </div>
+                <div class="col-2 d-none d-lg-inline-block">
+                    <span class="w-100 h-1px bg-dark-gray opacity-2 d-flex mx-auto"></span>
+                </div>
+                <!-- start social icon -->
+                <div class="col-md-auto elements-social social-icon-style-04 text-center text-md-start ps-lg-0">
+                    <ul class="large-icon dark">
+                        <li class="m-0"><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                        <li class="m-0"><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i><span></span></a></li>
+                        <li class="m-0"><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>      
+                        <li class="m-0"><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                        <li class="m-0"><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                    </ul>                  
+                </div>
+                <!-- end social icon -->
+            </div>
+        </div>
+    </section>    
+
+    {% include 'components/footer.html' %}
+
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vendors.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

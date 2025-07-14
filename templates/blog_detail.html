@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+    <title>Grandevoyager</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/logo/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/logo/site.webmanifest' %}">
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="{% static 'css/vendors.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/icon.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'demos/green-energy/green-energy.css' %}"/>
+	
+
+</head>
+<body data-mobile-nav-style="classic">
+
+    {% include 'components/navbar.html' %}
+
+    <!-- start page title -->
+    <section class="ipad-top-space-margin bg-dark-gray cover-background one-fifth-screen d-flex align-items-center" style="background-image: url('{{ blog.blog_image.url }}')">
+        <div class="opacity-light bg-dark-gray"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 position-relative" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [50, 0], "staggervalue": 100, "easing": "easeOutQuad" }'>
+                    <div class="d-inline-block mb-20px sm-mb-25px">
+                        <span class="text-white fs-18 opacity-5">
+                            <a href="" class="text-white">{{ blog.posted_on|date:"d M, Y" }}</a>
+                            <span class="d-inline-block fs-24 align-top ms-10px me-10px">•</span>
+                            <a href="" class="text-white">Grandevoyager Team</a>
+                        </span>
+                    </div>
+                    <h1 class="text-white w-100 fw-600 ls-minus-2px ls-minus-2px text-white pb-10px">{{ blog.blog_title }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- start section -->
+    <section class="pb-0"> 
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                    <p class="w-90 lg-w-100">{{ blog.blog_content|safe }}</p>
+                </div>
+            </div>
+        </div>
+    </section> 
+    
+    
+    <!-- start section -->
+    <section class="bg-gradient-green-transparent">
+        <div class="container">
+            <div class="row mb-3 text-center">
+                <div class="col">
+                    <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Browse the latest</span>
+                    <h3 class="fw-700 mb-0 text-dark-gray ls-minus-1px">Latest articles</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <li class="grid-sizer"></li>
+                        
+                        {% for blog in blogs %}
+                        <li class="grid-item">
+                            <div class="card border-0 border-radius-5px box-shadow-quadruple-large box-shadow-quadruple-large-hover">
+                                <div class="blog-image">
+                                    <a href="/blogs/{{ blog.slug }}/" class="d-block">
+                                        <img src="{{ blog.blog_image.url }}" alt="blog" />
+                                    </a>
+                                    <div class="blog-categories">
+                                        <a href="/blogs/{{ blog.slug }}/" class="categories-btn bg-white text-dark-gray text-dark-gray-hover text-uppercase fw-700">{{ blog.posted_on|date:"d M, Y" }}</a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-6 lg-p-10">
+                                    <a href="/blogs/{{ blog.slug }}/" class="card-title mb-15px fw-600 fs-20 text-dark-gray d-inline-block">{{ blog.blog_title }}</a>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/footer.html' %}
+
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vendors.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

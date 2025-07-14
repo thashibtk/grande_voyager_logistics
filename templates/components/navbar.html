@@ -1,0 +1,56 @@
+{% load static %}
+
+<header>
+    <nav class="navbar navbar-expand-lg header-light bg-white header-reverse" data-header-hover="light">
+        <div class="container-fluid"> 
+            <div class="col-auto">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'images/logo/main-logo-dark.png' %}" data-at2x="{% static 'images/logo/main-logo-dark.png' %}" alt="logo" class="default-logo">
+                    <img src="{% static 'images/logo/main-logo-dark.png' %}" data-at2x="{% static 'images/logo/main-logo-dark.png' %}" alt="logo" class="alt-logo">
+                    <img src="{% static 'images/logo/main-logo-dark.png' %}" data-at2x="{% static 'images/logo/main-logo-dark.png' %}" alt="logo" class="mobile-logo">
+                </a>
+            </div>
+            <div class="col-auto menu-order left-nav">
+                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li> 
+                        <li class="nav-item"><a href="{%  url 'about' %}" class="nav-link">About</a></li>
+                        <li class="nav-item dropdown dropdown-with-icon-style02"><a href="{% url 'services' %}" class="nav-link">Services</a>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu two-column-dropdown" aria-labelledby="navbarDropdownMenuLink1"> 
+                                {% for service in services_nav %}
+                                <li><a href="/services/{{ service.slug }}/" class="dropdown-item"> - {{ service.service_title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="{% url 'facilities' %}" class="nav-link">Facilities</a></li>
+                        <li class="nav-item"><a href="{% url 'certificates' %}" class="nav-link">Certificates</a></li>
+                        <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex"> 
+                <!--<div class="d-none d-xl-flex me-25px xl-me-0">
+                    <div class="d-flex align-items-center widget-text fw-600"><a href="tel:+971553698223"><span class="d-inline-block align-middle me-10px bg-very-light-green h-45px w-45px lh-44 text-center rounded-circle text-base-color"><i class="feather icon-feather-phone-call"></i></span><span class="d-none d-xxl-inline-block align-middle">+971 55 369 8223</span></a></div>
+                </div>  --> 
+                <div class="header-icon">
+                    <div class="header-button">
+                        <a href="mailto:info@domain.com" class="btn border-1 btn-base-color btn-small btn-rounded btn-box-shadow left-icon btn-switch-text">
+                            <span>
+                                <span><i class="fa-regular fa-envelope"></i></span>
+                                <span class="btn-double-text" data-text="Send a message">Send a message</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

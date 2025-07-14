@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+    <title>Grandevoyager</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/logo/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/logo/site.webmanifest' %}">
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="{% static 'css/vendors.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/icon.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'demos/green-energy/green-energy.css' %}"/>
+	
+<style>
+    .facility-banner{
+        background-image: url("{% static 'images/facility-banner.png' %}");
+    }
+</style>
+</head>
+<body data-mobile-nav-style="classic">
+
+    {% include 'components/navbar.html' %}
+
+    <!-- banner -->
+    <section class="top-space-margin overflow-hidden p-0 bg-very-light-gray page-title-big-typography">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center small-screen sm-h-400px g-0">
+                <div class="col-md-6 d-flex justify-content-center flex-column ps-7 pe-15px sm-ps-15px cover-background banner-background text-white text-md-start text-center page-title-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    <h1 class="fw-600 mb-10px ls-minus-2px">Facilities</h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 position-relative cover-background sm-pt-50px facility-banner" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start section -->
+    <section>
+        <div class="container">
+            <div class="row align-items-center justify-content-center mb-7 sm-mb-40px">
+                <div class="col-xl-5 col-lg-6 col-md-12 md-mb-50px" data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                    <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Our Facilities</span>
+                    <h3 class="fw-700 text-dark-gray ls-minus-2px mb-30px" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>Facilities That Support Every Move</h3>
+                    
+                    <div class="icon-with-text-style-08 mb-10px">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">LESS THAN CONTAINER LOAD - LCL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-with-text-style-08 mb-10px">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">FULL CONTAINER LOAD - FCL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-with-text-style-08 mb-10px">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">SALE OF SOC CONTAINERS - SHIPPER OWNED CONTAINERS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">ROLL ON - ROLL OFF - RORO SERVICES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">REFRIGERATED CONTAINER - REEFER CONTAINERS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">BREAKBULK CARGO HANDLING</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">CONTAINER LOADING AND UNLOADING SERVICES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">WAREHOUSING FACILITY (IN MAINLAND & JAFZA)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">MARINE INSURANCE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">IMPORT / EXPORT CUSTOMS DOCUMENTATION</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">DOMESTIC TRANSPORTATION</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">Certification can be arranged as required to different African countries such as CNCA, ECTN, BITEC ETC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-with-text-style-08">
+                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
+                            <div class="feature-box-icon feature-box-icon-rounded w-35px h-35px bg-very-light-green rounded-circle me-10px">
+                                <i class="fa-solid fa-check fs-14 text-green"></i> 
+                            </div>
+                            <div class="feature-box-content"> 
+                                <span class="text-dark-gray">Third party inspections such as BV, SGS, Interek etc can be coordinated on behalf of Shipper/Consignee.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-6 offset-xl-1 position-relative z-index-1" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <div class="atropos" data-atropos data-atropos-perspective="2450">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner">
+                                    <img src="{% static 'images/facilities.png' %}" alt="facilities" class="border-radius-6px w-100"/>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 text-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <i class="bi bi-envelope text-dark-gray d-inline-block align-middle icon-extra-medium me-5px"></i>
+                    <div class="fs-18 text-dark-gray d-inline-block align-middle fw-500">Need facility support for your next shipment? <a href="{% url 'contact' %}" class="text-dark-gray text-decoration-line-bottom fw-600">Contact us</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/footer.html' %}
+
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vendors.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

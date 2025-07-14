@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+    <title>Grandevoyager</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/logo/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/logo/site.webmanifest' %}">
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="{% static 'css/vendors.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/icon.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'demos/green-energy/green-energy.css' %}"/>
+	
+<style>
+    .service-banner{
+        background-image: url("{% static 'images/service-banner.png' %}");
+    }
+</style>
+</head>
+<body data-mobile-nav-style="classic">
+
+    {% include 'components/navbar.html' %}
+
+    <!-- banner -->
+    <section class="top-space-margin overflow-hidden p-0 bg-very-light-gray page-title-big-typography">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center small-screen sm-h-400px g-0">
+                <div class="col-md-6 d-flex justify-content-center flex-column ps-7 pe-15px sm-ps-15px cover-background banner-background text-white text-md-start text-center page-title-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    <h1 class="fw-600 mb-10px ls-minus-2px">Services</h1>
+                    <h2 class="opacity-6 mb-0 fw-300">Complete Logistics Solutions</h2>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 position-relative cover-background sm-pt-50px service-banner" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- start section --> 
+    <section>
+        <div class="container">
+            <div class="row justify-content-center g-0">
+                <div class="col-xl-7 col-lg-10 xl-mb-50px sm-mb-35px">
+                    <div data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                        <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Our Services</span>
+                        <h2 class="fw-700 text-dark-gray ls-minus-2px mb-35px w-85 xl-w-100">Reliable Logistics, Worldwide</h2>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="col" >
+                            <ul class="p-0 m-0 list-style-02 text-dark-gray fw-500" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Ocean Freight</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Air Freight</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Import & Export Customs Clearance</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Aviation Cargo Handling</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Project Cargo Logistics</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Exhibition Logistics</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Time Sensitive Cargo</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Surface Transportation</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Contract Logistics</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="p-0 m-0 list-style-02 text-dark-gray fw-500" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Less Than Truckload Shipping</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Full Truck Load Services</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Car & Automobile Moving</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Dangerous Goods Logistics</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Cross-Border Freight</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Door-to-Door Services</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>Office/Commercial Moving</li>
+                                <li class="pb-5px"><i class="fa-solid fa-plus fs-12 me-5px"></i>E-Commerce Logistics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-auto col-lg-8 ms-60px xl-ms-0 position-relative md-mb-7 sm-mb-12">
+                    <div class="w-85 mt-minus-20px float-end" data-animation-delay="200" data-shadow-animation="true">
+                        <img src="{% static 'images/s1.png' %}" class="border-radius-6px w-100" alt="" />
+                    </div>
+                    <div class="w-50 position-absolute left-0px bottom-10px xl-bottom-40px lg-bottom-minus-40px md-bottom-10px md-bottom-minus-40px" data-shadow-animation="true" data-animation-delay="400" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
+                        <div class="position-relative">
+                            <img src="{% static 'images/s2.png' %}" alt="" class="box-shadow-quadruple-large border-radius-6px w-100" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- start section -->
+    <section class="bg-very-light-green">
+        <div class="container">
+            <div class="row mb-5 sm-mb-30px text-center">
+                <div class="col" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    <span class="fs-16 text-uppercase text-base-color fw-600 mb-5px d-block">Service Details</span>
+                    <h2 class="fw-700 text-dark-gray ls-minus-2px mb-0">Explore Each Service in Detail</h2>
+                </div>
+            </div>  
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                
+                {% for service in services %}
+                <div class="col mb-30px">
+                    <div class="border-radius-6px overflow-hidden box-shadow-quadruple-large services-box-style-03 last-paragraph-no-margin">
+                        <div class="position-relative box-image">
+                            <a href="/services/{{ service.slug }}/"><img src="{{ service.service_image.url }}" alt="service"></a>
+                        </div>
+                        <div class="bg-white">
+                            <div class="p-30px text-center">
+                                <a href="/services/{{ service.slug }}/" class="d-inline-block fs-18 fw-600 text-dark-gray">{{ service.service_title }}</a>
+                            </div> 
+                            <div class="d-flex justify-content-center border-top border-color-extra-medium-gray pt-20px pb-20px ps-50px pe-50px position-relative text-center">
+                                <a href="/services/{{ service.slug }}/" class="btn btn-link btn-hover-animation-switch btn-extra-large text-dark-gray">
+                                    <span>
+                                        <span class="btn-text">Explore service</span>
+                                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                        <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </span> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+    
+
+    {% include 'components/footer.html' %}
+
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vendors.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
