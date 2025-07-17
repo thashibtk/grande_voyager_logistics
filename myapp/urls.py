@@ -13,6 +13,7 @@ urlpatterns = [
     path('blogs/', views.blog, name='blog'),
     path('blogs/<str:pk>/', views.blog_detail, name='blog-detail'),
     path('contact/', views.contact, name='contact'),
+    path('test-newsletter/', views.test_newsletter, name='test_newsletter'), 
 ]
 
 if settings.DEBUG:

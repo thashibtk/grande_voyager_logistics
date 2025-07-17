@@ -39,12 +39,6 @@
         .home-h1{
             background-image: url("{% static 'images/home-h1.jpg' %}");
         }
-
-        .bgyellow{
-            --bs-bg-opacity: 1;
-            background: linear-gradient(to top, rgb(255 255 255) 0%, #fadb94 100%);
-        }
-
     </style>
 
 </head>
@@ -176,13 +170,24 @@
         <div class="position-absolute md-position-relative right-210px xxl-right-25px md-right-0px bottom-minus-5px z-index-1 w-35 xl-w-45 md-w-100 md-bottom-minus-0px md-mt-6">
             <div class="row border-radius-10px lg-no-border-radius overflow-hidden g-0 md-ps-5 md-pe-5 sm-pb-15px">
 
-                <div class="col-md-12 p-7 sm-p-0 bgyellow  text-center">
+                <div class="col-md-12 p-7 sm-p-0 bg-white text-center">
                     <div class="fs-24 lg-fs-20 lh-32 lg-lh-24 text-dark-gray ls-minus-1px mb-20px md-mb-15px"><span class="fw-600">Subscribe Now </span>for the Latest</div>
                     <div class="d-inline-block w-100 newsletter-style-02 position-relative">
-                        <form action="/" method="post" class="position-relative w-100">
+                        <form method="post" action="" class="position-relative w-100">
                             {% csrf_token %}
-                            <input class="bg-transparent border-color-base-color w-100 form-control required border-radius-50px" type="email" name="email" placeholder="Enter your email">
-                            <button class="btn submit bg-base-color border-radius-30px" aria-label="submit" type="submit"><i class="icon bi bi-arrow-right icon-small text-white"></i></button>
+                            <input 
+                                class="bg-transparent border-color-base-color w-100 form-control border-radius-50px" 
+                                type="email" 
+                                name="email" 
+                                placeholder="Enter your email"
+                                required
+                            >
+                            <button 
+                                class="btn bg-base-color border-radius-30px" 
+                                type="submit"
+                            >
+                                <i class="icon bi bi-arrow-right icon-small text-white"></i>
+                            </button>
                         </form>
                     </div>
                     <span class="fs-12 lh-20 mt-5px d-inline-block">*You agree to Grandevoyager's terms of service.</span>
